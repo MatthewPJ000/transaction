@@ -1,0 +1,138 @@
+/* Button Customization */
+.btn-custom {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark backdrop */
+  z-index: 999;
+  animation: fadeIn 0.5s;
+}
+
+.modal-dialog {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.modal-body h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  font-size: 16px;
+  color: #666;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #353d2f;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #7b7d77;
+  transform: scale(1.05);
+}
+
+.flex-col {
+  display: flex;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

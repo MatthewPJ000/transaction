@@ -1,0 +1,30 @@
+
+      {/* Modal */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              {/* Modal Header */}
+              <div className="modal-header">
+                <h4 className="modal-title">Card Connect</h4>
+                <button className="close" onClick={closeModal}>
+                  &times;
+                </button>
+              </div>
+              
+              {/* Modal Body */}
+              <div className="modal-body">
+                Modal body..
+              </div>
+
+              {/* Modal Footer */}
+              <div className="modal-footer">
+                <button className="btn btn-danger" onClick={closeModal}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      

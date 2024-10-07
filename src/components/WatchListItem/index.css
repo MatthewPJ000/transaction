@@ -1,0 +1,14 @@
+/* src/CurrencyDisplay.css */
+
+.currency-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 5px;
+    color: #89898b;
+}
+
+.currency-code {
+    font-size: 10px;
+    font-weight: bold;
+}

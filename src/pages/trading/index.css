@@ -1,0 +1,26 @@
+.chart-container{
+    flex: 66.0633 1 0px;
+    display: flex;
+}
+
+.watchlist-trade-container{
+    height: 100%;
+}
+
+.trading-page-container{
+    display: flex;
+    max-height: -webkit-fill-available;
+    height: 100%;
+    padding: 10px;
+}
+
+.tradingview-container{
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+}
+
+.tradingview-widget-container iframe{
+    border: 1px solid #363a45;
+    border-radius: 10px;
+}

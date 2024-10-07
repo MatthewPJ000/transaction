@@ -1,0 +1,134 @@
+/* src/InstrumentTable.css */
+.watchlist-container{
+  background-color: #101013;
+}
+.instrument-table-container {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.watchlist-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 43px;
+  border-bottom: 1px solid #1b1b1b;
+  padding: 0px 10px;
+}
+
+.watchlist-topbar-search {
+  padding: 2px;
+  border: 1px solid #434346;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  height: 22px;
+}
+
+.watchlist-topbar select {
+  padding: 5px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  
+  table th, table td {
+    border: 1px solid #555;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #444;
+  }
+  
+  table tbody tr:hover {
+    background-color: #333;
+  } */
+
+.trading-actions {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.market-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  display: flex;
+  gap: 5px;
+}
+
+.trade-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.sell-button,
+.buy-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sell-button {
+  background-color: #e74c3c;
+}
+
+.buy-button {
+  background-color: #2ecc71;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+  height: 5px;
+}
+
+/* Style the track */
+::-webkit-scrollbar-track {
+  background: #333; /* Background of the scrollbar track */
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Style the thumb */
+::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  border: 1px solid #333; /* Padding around the thumb */
+}
+
+/* Style the thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Color of the scrollbar thumb on hover */
+}
