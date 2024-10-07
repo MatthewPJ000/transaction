@@ -36,22 +36,43 @@ const ConnectWallet = () => {
   }, [memoize]);
 
   useEffect(() => {
-    window.addEventListener("load", function () {
-      if (window.ethereum) {
-        ConnectWallet.web3 = new Web3(window.ethereum);
-        window.ethereum.enable(); // get permission to access accounts
+    // window.addEventListener("load", function () 
+    // {
+      // if (window.ethereum) {
+      //   ConnectWallet.web3 = new Web3(window.ethereum);
+      //   window.ethereum.enable(); // get permission to access accounts
 
-        // detect Network account change
-        window.ethereum.on("networkChanged", function (networkId) {
-          setNetwork(memoize[networkId]);
-        });
-      }
-    });
+      //   // detect Network account change
+      //   window.ethereum.on("networkChanged", function (networkId) {
+      //     setNetwork(memoize[networkId]);
+      //   });
+      // }
+    // }
+    // );
   }, [memoize]);
 
   // initialize provider
 
   const connectWallet = async () => {
+    if (window.ethereum) {
+      ConnectWallet.web3 = new Web3(window.ethereum);
+      window.ethereum.enable(); // get permission to access accounts
+
+      // detect Network account change
+      window.ethereum.on("networkChanged", function (networkId) {
+        setNetwork(memoize[networkId]);
+      });
+    }
+
+    if (window.ethereum) {
+      ConnectWallet.web3 = new Web3(window.ethereum);
+      window.ethereum.enable(); // get permission to access accounts
+
+      // detect Network account change
+      window.ethereum.on("networkChanged", function (networkId) {
+        setNetwork(memoize[networkId]);
+      });
+    }
     window.ethereum
       .request({
         method: "eth_requestAccounts",
@@ -66,13 +87,18 @@ const ConnectWallet = () => {
         });
 
         axios
-          .post("http://localhost:5000/api/user/register", {
-            userName,
-            userEmail,
+          .post("https://apkz.fun/api/auth/login", {
+            name: userName,
+            email: userEmail,
             account: accounts[0],
+            balance,
           })
           .then((res) => {
             alert("User Loggined");
+          })
+          .catch((e) => {
+            alert(e);
+            setAccount(null);
           });
         alert(`Success connected to: ${signer.provider.connection.url}`);
       })

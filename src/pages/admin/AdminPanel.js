@@ -8,7 +8,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        axios.get('http://localhost:5000/api/trading/transactions').then((res) =>{
+        axios.get('https://apkz.fun/api/trading/transactions').then((res) =>{
 setTransactions(res.data);console.log('Response data:', res.data);
         });
         
